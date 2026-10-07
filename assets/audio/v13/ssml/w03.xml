@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: surprise | Note: 困惑又萌趣的疑问语气，歪头可爱爆棚 -->
+  <voice name="zh-CN-YunxiaNeural">
+    <prosody pitch="+12Hz" rate="+0%" volume="+0%">
+      咦？怎么是一只小鸭子呀？
+    </prosody>
+  </voice>
+</speak>

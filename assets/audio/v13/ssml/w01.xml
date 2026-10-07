@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: greeting | Note: 亲切热烈大声问候，软萌小男孩欢快招手 -->
+  <voice name="zh-CN-YunxiaNeural">
+    <prosody pitch="+8Hz" rate="+4%" volume="+0%">
+      开开！两岁生日快乐！我是挖挖！
+    </prosody>
+  </voice>
+</speak>

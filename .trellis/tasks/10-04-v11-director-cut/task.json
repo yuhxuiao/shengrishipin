@@ -1,0 +1,20 @@
+{
+  "id": "v11-director-cut",
+  "name": "v11-director-cut",
+  "title": "V11 导演版 ≤240s: 摄像机+表演+分件骨骼配角+程序化脸",
+  "description": "针对 v10 终审不满(零镜头/idle 站桩/贴纸配角/平涂背景)重做导演层、表演层、场景层。决策: 时长<=240s; 配角全部分件骨骼; 挖挖表情程序化脸; 允许看镜头说话; 可扩展剧本分镜。",
+  "status": "completed",
+  "priority": "P1",
+  "creator": "yuhuxiao",
+  "assignee": "yuhuxiao",
+  "createdAt": "2026-10-04",
+  "completedAt": "2026-10-04",
+  "branch": "master",
+  "base_branch": "master",
+  "subtasks": [],
+  "children": [],
+  "parent": null,
+  "relatedFiles": ["docs/v10-2D动画视角评审与迭代计划.md"],
+  "notes": "",
+  "meta": {}
+}

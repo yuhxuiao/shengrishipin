@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: cheerful_sunrise | Note: 晨曦初升的元气欣喜，阳光大姐姐般的温暖破晓宣告 -->
+  <voice name="zh-CN-XiaoxiaoNeural">
+    <prosody pitch="+5Hz" rate="+6%" volume="+0%">
+      太阳升起来啦！
+    </prosody>
+  </voice>
+</speak>

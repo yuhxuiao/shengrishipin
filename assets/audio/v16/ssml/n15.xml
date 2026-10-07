@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: anticipation_eager | Note: 迫不及待的跃动感，锁定大树下目标 -->
+  <voice name="zh-CN-XiaoxiaoNeural">
+    <prosody pitch="+6Hz" rate="+6%" volume="+0%">
+      第三个记号在大树下！宾果已经等不及啦！
+    </prosody>
+  </voice>
+</speak>

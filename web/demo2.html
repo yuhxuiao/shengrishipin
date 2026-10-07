@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>v7 融合路线 demo</title>
+<style>html,body{margin:0;background:#111}canvas{display:block}</style>
+</head>
+<body>
+<canvas id="out" width="1920" height="1080"></canvas>
+<script src="src/engine.js"></script>
+<script src="src/camera.js"></script>
+<script src="src/rig.js"></script>
+<script src="src/demo2.js"></script>
+<script>
+const canvas = document.getElementById('out');
+const ctx = canvas.getContext('2d');
+window.ready = false;
+
+window.renderAt = function (t, type, q) {
+  drawFrameDemo2(ctx, Math.max(0, Math.min(t, DEMO2_TOTAL - 1e-3)));
+  return canvas.toDataURL(type || 'image/jpeg', q ?? .94);
+};
+window.renderSheet = function (ts, cols, w) {
+  const rows = Math.ceil(ts.length / cols);
+  const h = w * 9 / 16;
+  const sheet = document.createElement('canvas');
+  sheet.width = cols * w; sheet.height = rows * h;
+  const c2 = sheet.getContext('2d');
+  const ms = [];
+  ts.forEach((t, i) => {
+    const s = Date.now();
+    drawFrameDemo2(ctx, t);
+    c2.drawImage(canvas, (i % cols) * w, ((i / cols) | 0) * h, w, h);
+    ms.push(Date.now() - s);
+  });
+  return { url: sheet.toDataURL('image/jpeg', .9), ms };
+};
+
+(async () => {
+  const [bg, kk] = await Promise.all([
+    loadImg('../output/tests/ai/bg-party.png'),
+    loadImg('../output/tests/ai/kaikai-green.png'),
+  ]);
+  A2.bg = bg;
+  A2.kaikai = keyGreen(kk);
+  window.ready = true;
+})();
+</script>
+</body>
+</html>

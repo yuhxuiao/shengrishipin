@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: excited_praise | Note: 高调赞美戴上生日帽的帅气挖挖 -->
+  <voice name="zh-CN-XiaoxiaoNeural">
+    <prosody pitch="+7Hz" rate="+6%" volume="+0%">
+      哇！好漂亮的生日帽！挖挖戴上啦！
+    </prosody>
+  </voice>
+</speak>

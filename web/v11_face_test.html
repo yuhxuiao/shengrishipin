@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>V11 Wawa Procedural Face Test (3x3 Grid)</title>
+  <style>
+    body { margin: 0; background: #222; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    canvas { background: #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+  </style>
+</head>
+<body>
+  <canvas id="out" width="1920" height="1080"></canvas>
+  <script src="src/v10/fk.js"></script>
+  <script src="src/v11/face.js"></script>
+  <script>
+    async function init() {
+      const canvas = document.getElementById('out');
+      const ctx = canvas.getContext('2d');
+      const imgBody = new Image();
+      imgBody.src = '../assets/images/v10/parts/body.png';
+      await new Promise(r => { imgBody.onload = r; });
+
+      const presets = ['neutral', 'happy', 'laugh', 'surprise', 'anticipate', 'focus', 'proud', 'shy', 'talk'];
+      const cols = 3, rows = 3;
+      const cellW = 1920 / cols, cellH = 1080 / rows;
+      const scale = 0.35;
+
+      ctx.fillStyle = '#6BA4FF';
+      ctx.fillRect(0, 0, 1920, 1080);
+
+      presets.forEach((name, idx) => {
+        const c = idx % cols;
+        const r = Math.floor(idx / cols);
+        const x = c * cellW + cellW / 2;
+        const y = r * cellH + cellH / 2;
+
+        ctx.save();
+        // 绘制单元格背景与标题
+        ctx.fillStyle = 'rgba(255,255,255,0.15)';
+        ctx.fillRect(c * cellW + 10, r * cellH + 10, cellW - 20, cellH - 20);
+
+        ctx.fillStyle = '#0B2F6E';
+        ctx.font = 'bold 28px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(name.toUpperCase(), x, r * cellH + 45);
+
+        // 居中绘制带车身和表情的头像
+        ctx.translate(x - (819 * scale) / 2, y - (961 * scale) / 2 + 15);
+        ctx.scale(scale, scale);
+
+        // 绘制车身原图
+        ctx.drawImage(imgBody, 0, 0);
+
+        // 叠加程序化灵动表情
+        const expr = V11Face.PRESETS[name];
+        V11Face.draw(ctx, expr, 0);
+
+        ctx.restore();
+      });
+
+      window.ready = true;
+      window.renderAt = (t) => canvas.toDataURL('image/jpeg', 0.95);
+    }
+    init();
+  </script>
+</body>
+</html>

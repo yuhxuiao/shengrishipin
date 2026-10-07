@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: naughty_revealing | Note: 聪明狡黠的小得意，为终极宝藏埋下最大期待 -->
+  <voice name="zh-CN-YunxiNeural">
+    <prosody pitch="+7Hz" rate="+5%" volume="+0%">
+      开开，骨头是给宾果的，真正的宝藏还在后面呢！
+    </prosody>
+  </voice>
+</speak>

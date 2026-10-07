@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: celebratory | Note: 充满庆祝感与仪式感，郑重而欢悦地宣告两岁生日 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+5Hz" rate="+4%" volume="+0%">
+      今天是开开的两岁生日！
+    </prosody>
+  </voice>
+</speak>

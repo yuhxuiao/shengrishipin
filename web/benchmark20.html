@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>花园小发现</title>
+<style>
+:root{color-scheme:light dark;--bg:#f3efe5;--text:#34435f;--panel:#e5e7dc;--accent:#426c83}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#202a30;--text:#f3efe5;--panel:#34434d;--accent:#aed3e7}}
+:root[data-theme="dark"]{--bg:#202a30;--text:#f3efe5;--panel:#34434d;--accent:#aed3e7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:sans-serif;padding:20px 16px}main{max-width:1440px;margin:auto}h1{font-size:19px;margin:0 0 12px;font-weight:500}canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#dcebd9}nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0}button{border:0;background:var(--panel);color:var(--text);padding:10px 20px;min-height:44px;border-radius:6px;font:inherit;cursor:pointer}input{flex:1;min-width:160px;accent-color:var(--accent)}output{font-size:13px;font-variant-numeric:tabular-nums}p{font-size:13px;opacity:.8;margin:0}button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body><main>
+<h1>花园小发现 · 20 秒表演样片</h1>
+<canvas id="out" width="1920" height="1080" aria-label="布鲁伊和挖挖发现小鸭的20秒动画"></canvas>
+<nav aria-label="动画播放控制"><button id="play" type="button">播放</button><button id="restart" type="button">回到开头</button><input id="time" type="range" min="0" max="20" step="0.01" value="0" aria-label="动画时间"><output id="time-label">0 / 20 s</output></nav>
+<p>此预览用于检查动作与构图, 无声. 有声成片另行导出; 控件不会进入视频.</p>
+</main>
+<script src="src/v10/fk.js"></script>
+<script src="src/benchmark20/pose.js"></script>
+<script src="src/benchmark20/dig.js"></script>
+<script src="src/benchmark20/shots.js"></script>
+<script src="src/benchmark20/paint.js"></script>
+<script src="src/benchmark20/pup.js"></script>
+<script src="src/benchmark20/wawa.js"></script>
+<script src="src/benchmark20/scene.js"></script>
+<script src="src/benchmark20/main.js"></script>
+</body></html>

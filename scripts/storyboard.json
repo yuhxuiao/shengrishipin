@@ -1,0 +1,135 @@
+{
+  "title": "开开的两岁生日派对",
+  "baby": "黄山遥(小名:开开)",
+  "birthday": "2026-10-18",
+  "target_seconds": 240,
+  "style": "Bright kawaii 2D cartoon illustration for a 2-year-old children's animation, Bluey-inspired soft rounded shapes, cheerful warm colors, flat clean shading, gentle and cute. Absolutely no text, no letters, no watermark, no logo.",
+  "character": "cute chubby blue cartoon excavator: big sparkly eyes and a smiling mouth on the cab window as its face, black caterpillar tracks, blue arm and bucket, wearing a yellow polka-dot party hat",
+  "shots": [
+    {
+      "id": "s01", "name": "开场全景", "min_dur": 14, "motion": "zoom_in",
+      "mode": "t2i",
+      "prompt": "Wide establishing shot of a bright cheerful cartoon construction site on a sunny day, blue sky with fluffy clouds, green grass, colorful birthday bunting flags strung across the top, balloons floating, a small dirt pile and traffic cones, festive and empty of characters, inviting scene",
+      "voice": "narrator",
+      "narration": "哈喽,各位小朋友!今天有一件超级开心的大事要发生!我们最可爱的小宝贝——黄山遥,小名叫开开,今天两岁啦!",
+      "banner": ""
+    },
+    {
+      "id": "s02", "name": "开开登场", "min_dur": 16, "motion": "zoom_in",
+      "mode": "edit",
+      "prompt": "The blue excavator drives in happily and waves its bucket like saying hello, big sparkly eyes blinking, colorful bunting and balloons behind it, medium close-up shot, adorable",
+      "voice": "kaikai",
+      "narration": "大家好!我是开开挖掘机!今天是2026年10月18日,是小开开的两岁生日!我要举办一场超级热闹的生日派对!",
+      "banner": "小开开,挥挥小手,和挖掘机打个招呼吧!",
+      "sfx": ["rumble"]
+    },
+    {
+      "id": "s03", "name": "互动·举挖斗", "min_dur": 13, "motion": "zoom_out",
+      "mode": "edit",
+      "prompt": "The blue excavator raises its bucket arm slowly high up into the air like demonstrating an exercise for kids, clear side view, simple clean background of the construction site, encouraging and fun",
+      "voice": "narrator",
+      "narration": "现在,请我们的小寿星开开,跟着挖掘机一起动一动!小手举高高,变成大挖斗!",
+      "banner": "小手举高高,变成大挖斗!"
+    },
+    {
+      "id": "s04", "name": "互动·挖土", "min_dur": 14, "motion": "pan_left",
+      "mode": "edit",
+      "prompt": "The blue excavator digs its bucket gently into a soft dirt pile then lifts it up full of dirt, small dirt clumps tumbling cutely, side view, playful demonstration",
+      "voice": "narrator",
+      "narration": "往下挖一挖!往上抬一抬!哇——做得太棒啦!再来一次:挖一挖,抬一抬!",
+      "banner": "挖一挖,抬一抬!",
+      "sfx": ["dig"]
+    },
+    {
+      "id": "s05", "name": "小队登场·一", "min_dur": 13, "motion": "pan_right",
+      "mode": "t2i",
+      "prompt": "A cute red cartoon dump truck with a smiling face and a cute yellow cartoon crane truck with a smiling face driving together into the construction site on a dirt road, confetti in the air, festive birthday bunting, both wearing tiny party hats, kawaii children's cartoon style",
+      "voice": "narrator",
+      "narration": "咚咚咚!是谁来了?是工程车小队!红色的翻斗车嘟嘟,黄色的吊车高高,都来给开开过生日啦!",
+      "banner": ""
+    },
+    {
+      "id": "s06", "name": "小队登场·二", "min_dur": 13, "motion": "pan_left",
+      "mode": "t2i",
+      "prompt": "A cute green cartoon cement mixer truck with a smiling face and a cute orange cartoon bulldozer with a smiling face arriving at the construction site, balloons tied to them, tiny party hats, cheerful kawaii children's cartoon style",
+      "voice": "narrator",
+      "narration": "还有绿色的搅拌车转转,和力气最大的推土机壮壮!大家一起说:生日快乐!",
+      "banner": ""
+    },
+    {
+      "id": "s07", "name": "布置派对", "min_dur": 13, "motion": "zoom_in",
+      "mode": "t2i",
+      "prompt": "The yellow crane truck is hanging colorful bunting flags up high while the red dump truck carries a bed full of bright balloons, teamwork at the birthday construction site, festive and busy, kawaii children's cartoon",
+      "voice": "narrator",
+      "narration": "派对要开始啦!吊车高高挂彩旗,翻斗车嘟嘟运气球,大家忙得不亦乐乎!",
+      "banner": ""
+    },
+    {
+      "id": "s08", "name": "蛋糕登场", "min_dur": 14, "motion": "zoom_in",
+      "mode": "edit",
+      "prompt": "The blue excavator looks excited with sparkling eyes at a giant two-layer birthday cake with exactly two lit candles, the cake is on a big tray, the green mixer truck presents it proudly in the background, balloons everywhere",
+      "voice": "kaikai",
+      "narration": "哇!好大的生日蛋糕!上面有两根蜡烛,因为小开开今天两岁啦!",
+      "banner": ""
+    },
+    {
+      "id": "s09", "name": "许愿坑", "min_dur": 14, "motion": "zoom_in",
+      "mode": "edit",
+      "prompt": "The blue excavator gently digs a small heart-shaped hole in the soft earth, inside the hole a glowing golden star wish sparkles softly, magical warm light, tender moment, twilight sky",
+      "voice": "narrator",
+      "narration": "开开挖了一个许愿坑,把小开开的心愿轻轻放进去,再盖好泥土。小小心愿,快快长大哦!",
+      "banner": "",
+      "sfx": ["sparkle"]
+    },
+    {
+      "id": "s10", "name": "生日歌", "min_dur": 30, "motion": "zoom_out",
+      "mode": "edit",
+      "prompt": "All five cute construction vehicles gathered around the giant birthday cake with two glowing candles at dusk, warm golden light, the blue excavator in the center wearing its party hat, everyone happy and singing, heartwarming group scene",
+      "voice": "song",
+      "narration": "祝你生日快乐|祝你生日快乐|祝小开开生日快乐|祝你生日快乐|祝你生日快乐|祝你生日快乐|祝小开开生日快乐|祝你生日快乐",
+      "banner": "一起唱:祝你生日快乐!"
+    },
+    {
+      "id": "s11", "name": "吹蜡烛", "min_dur": 12, "motion": "zoom_in",
+      "mode": "edit",
+      "prompt": "Close-up of the birthday cake with two candles just blown out, tiny smoke wisps curling up, colorful confetti bursting in the air, the blue excavator cheering with its bucket raised in the soft-focus background, exciting happy moment",
+      "voice": "narrator",
+      "narration": "小开开,深吸一口气——预备——吹!哇!蜡烛吹灭啦!愿望一定会实现!",
+      "banner": "深吸一口气,吹——!",
+      "sfx": ["sparkle"]
+    },
+    {
+      "id": "s12", "name": "切蛋糕", "min_dur": 13, "motion": "pan_right",
+      "mode": "edit",
+      "prompt": "The blue excavator gently slices the birthday cake with its clean bucket like a knife, neat cake slices on small paper plates nearby, careful and cute, everyone waiting happily",
+      "voice": "narrator",
+      "narration": "开开用大挖斗,轻轻切蛋糕。一人一块,甜甜的,真好吃!",
+      "banner": ""
+    },
+    {
+      "id": "s13", "name": "送礼物", "min_dur": 13, "motion": "zoom_in",
+      "mode": "t2i",
+      "prompt": "The cute construction vehicle team presenting a pile of colorful wrapped birthday gifts, picture books and a shiny little toy shovel on top, ribbons and bows, the red dump truck tipping gifts from its bed gently, kawaii children's cartoon",
+      "voice": "narrator",
+      "narration": "工程车小队还准备了礼物!有玩具、有绘本,还有一把亮晶晶的小铲子!小开开,你最喜欢哪一个呀?",
+      "banner": "你最喜欢哪一个呀?"
+    },
+    {
+      "id": "s14", "name": "心形合照", "min_dur": 15, "motion": "zoom_out",
+      "mode": "t2i",
+      "prompt": "Golden sunset over the construction site, all five cute construction vehicles forming a big heart shape around the little blue excavator in the center, warm orange and pink sky, cozy ending feeling, group photo composition",
+      "voice": "narrator",
+      "narration": "太阳下山啦,派对要结束了。大家一起围成一个大大的爱心,祝小开开:健康快乐,天天开心,勇敢地挖呀挖!",
+      "banner": ""
+    },
+    {
+      "id": "s15", "name": "结尾告别", "min_dur": 24, "motion": "zoom_out",
+      "mode": "edit",
+      "prompt": "At golden sunset, the cute blue excavator waves goodbye with its bucket, gentle warm orange and pink sky, soft clouds, the construction site calm and happy, no signs, no banners, clean composition with open sky area",
+      "voice": "kaikai_then_narrator",
+      "narration": "小开开,谢谢你和我一起过生日!我们明年三岁生日再见!拜拜!||黄山遥,两周岁生日快乐!",
+      "banner": "黄山遥 两周岁生日快乐!|2026.10.18",
+      "ending_card": true
+    }
+  ]
+}

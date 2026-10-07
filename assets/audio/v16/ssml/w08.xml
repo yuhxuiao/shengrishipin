@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: proud_triumph | Note: 童真男孩自豪万分的宣告，大获成功 -->
+  <voice name="zh-CN-YunxiNeural">
+    <prosody pitch="+9Hz" rate="+6%" volume="+0%">
+      开开的大礼物破土而出啦！太棒啦！
+    </prosody>
+  </voice>
+</speak>

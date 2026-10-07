@@ -1,0 +1,2 @@
+{"file": ".trellis/spec/frontend/v10-animation-quality.md", "reason": "Validate final geometry and motion, not prose claims"}
+{"file": ".trellis/tasks/10-06-benchmark20-animation/design.md", "reason": "Sample-specific acceptance overrides and shared state"}

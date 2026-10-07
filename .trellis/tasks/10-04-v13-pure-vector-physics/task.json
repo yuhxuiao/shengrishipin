@@ -1,0 +1,20 @@
+{
+  "id": "v13-pure-vector-physics",
+  "name": "v13-pure-vector-physics",
+  "title": "V13: 纯代码矢量重绘角色 + 物理真实挖掘机力学 + 情感化少儿配音",
+  "description": "针对用户反馈：废弃 PNG 抠图，改用纯 Canvas2D 过程式矢量重绘 Bluey 与 Bingo 完整面容与无缝胶囊骨骼；实现真实挖掘机力学（地面反作用力、齿尖破土、斗内满土、动态深坑与重力倾倒）；使用 SSML 情感化标签重配充满戏剧起伏的少儿配音。多 Agent 并行加速。",
+  "status": "completed",
+  "priority": "P1",
+  "creator": "yuhuxiao",
+  "assignee": "yuhuxiao",
+  "createdAt": "2026-10-04",
+  "completedAt": "2026-10-04",
+  "branch": "master",
+  "base_branch": "master",
+  "subtasks": [],
+  "children": [],
+  "parent": null,
+  "relatedFiles": ["web/src/v13/vector_pup.js", "web/src/v13/physics_dig.js", "scripts/v13_vo.py"],
+  "notes": "",
+  "meta": {}
+}

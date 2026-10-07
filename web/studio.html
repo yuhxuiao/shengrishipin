@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>开开生日视频 studio</title>
+<style>html,body{margin:0;background:#111}canvas{display:block}</style>
+</head>
+<body>
+<canvas id="out" width="1920" height="1080"></canvas>
+<script src="timeline.js"></script>
+<script src="src/engine.js"></script>
+<script src="src/scenery.js"></script>
+<script src="src/kaikai.js"></script>
+<script src="src/cast.js"></script>
+<script src="src/scenes.js"></script>
+<script>
+const canvas = document.getElementById('out');
+const ctx = canvas.getContext('2d');
+window.ready = false;
+
+window.renderAt = function (t, type, q) {
+  drawFrame(ctx, Math.max(0, Math.min(t, window.TIMELINE.total - 1e-3)));
+  return canvas.toDataURL(type || 'image/jpeg', q ?? .94);
+};
+
+// 快速接触表:times[] 网格预览
+window.renderSheet = function (ts, cols, w) {
+  const rows = Math.ceil(ts.length / cols);
+  const h = w * 9 / 16;
+  const sheet = document.createElement('canvas');
+  sheet.width = cols * w; sheet.height = rows * h;
+  const c2 = sheet.getContext('2d');
+  const t0 = Date.now(), ms = [];
+  ts.forEach((t, i) => {
+    const s = Date.now();
+    drawFrame(ctx, t);
+    c2.drawImage(canvas, (i % cols) * w, ((i / cols) | 0) * h, w, h);
+    ms.push(Date.now() - s);
+  });
+  return { url: sheet.toDataURL('image/jpeg', .9), ms };
+};
+
+loadAll().then(() => { window.ready = true; });
+</script>
+</body>
+</html>

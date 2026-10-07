@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: gentle_anticipation | Note: 小心翼翼的温馨期待，美味蛋糕闪亮登场 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+6Hz" rate="+4%" volume="+0%">
+      小心，小心，美味的生日蛋糕来喽！
+    </prosody>
+  </voice>
+</speak>

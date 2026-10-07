@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: climax_anticipation | Note: 全场屏息以待的提问，能量积聚 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+8Hz" rate="+5%" volume="+0%">
+      准备好了吗？最大的秘密要出来啦！
+    </prosody>
+  </voice>
+</speak>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: whispering | Note: 压低声音的神秘悄悄话，引导宝宝集中注意力 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="-2Hz" rate="+2%" volume="-4%">
+      嘘——院子里藏着大秘密！
+    </prosody>
+  </voice>
+</speak>

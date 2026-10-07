@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: grand_reveal | Note: 史诗般宏大的悬念揭幕，高潮序曲 -->
+  <voice name="zh-CN-XiaoxiaoNeural">
+    <prosody pitch="+6Hz" rate="+3%" volume="+0%">
+      快看！真正的终极大宝藏……在这里！
+    </prosody>
+  </voice>
+</speak>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: surprise_humor | Note: 极具童趣的惊喜好笑，歪头学鸭叫嘎嘎嘎 -->
+  <voice name="zh-CN-YunxiNeural">
+    <prosody pitch="+9Hz" rate="+4%" volume="+0%">
+      咦？怎么是一只小鸭子呀？嘎嘎嘎！
+    </prosody>
+  </voice>
+</speak>

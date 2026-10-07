@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: discovery_delight | Note: 豁然开朗的发现喜悦，成就感拉满 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+8Hz" rate="+6%" volume="+0%">
+      发现第一个记号啦！
+    </prosody>
+  </voice>
+</speak>

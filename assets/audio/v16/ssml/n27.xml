@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: loving_finale | Note: 全片最具泪点与温情的深情表白，永远爱你的真挚承诺 -->
+  <voice name="zh-CN-XiaoxiaoNeural">
+    <prosody pitch="+4Hz" rate="-2%" volume="+0%">
+      开开，生日快乐！我们永远爱你！
+    </prosody>
+  </voice>
+</speak>

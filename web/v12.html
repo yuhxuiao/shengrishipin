@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>V12 动画升级版 · 开开的生日大冒险</title>
+<style>
+  @font-face {
+    font-family: 'ZCOOL KuaiLe';
+    src: url('fonts/ZCOOLKuaiLe-Regular.ttf') format('truetype');
+    font-display: block;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  canvas {
+    display: block;
+    max-width: 100vw;
+    max-height: 100vh;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  }
+</style>
+</head>
+<body>
+<canvas id="out" width="1920" height="1080"></canvas>
+
+<!-- 骨骼与运动学底层 (复用 v10) -->
+<script src="src/v10/fk.js"></script>
+
+<!-- 配角分件骨骼系统 (V12) -->
+<script src="src/v12/pup_rigs.js"></script>
+<script src="src/v12/pup.js"></script>
+<script src="src/v12/pup_face.js"></script>
+
+<!-- 挖挖五官表情与动作库 (V12) -->
+<script src="src/v12/face.js"></script>
+<script src="src/v12/actions.js"></script>
+
+<!-- 时间轴评估与转场系统 (V12 核心引擎) -->
+<script src="src/v12/timeline.js"></script>
+<script src="src/v12/transitions.js"></script>
+
+<!-- 镜头、场景、特效与分镜调度 (V12) -->
+<script src="src/v12/camera.js"></script>
+<script src="src/v12/scenery.js"></script>
+<script src="src/v12/fx.js"></script>
+<script src="src/v12/shots.js"></script>
+
+<!-- 口型与字幕数据 -->
+<script src="src/v12/lipsync.js"></script>
+<script src="src/v12/subtitles.js"></script>
+
+<!-- 全屏调色与暗角 (V12) -->
+<script src="src/v12/grade.js"></script>
+
+<!-- 主渲染管线 (V12) -->
+<script src="src/v12/titles.js"></script>
+<script src="src/v12/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: adventurous | Note: 朝气蓬勃、吹响号角般的寻宝召唤 -->
+  <voice name="zh-CN-YunxiaNeural">
+    <prosody pitch="+10Hz" rate="+8%" volume="+0%">
+      走！我们一起去寻宝！
+    </prosody>
+  </voice>
+</speak>

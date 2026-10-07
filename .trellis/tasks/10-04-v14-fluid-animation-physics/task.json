@@ -1,0 +1,20 @@
+{
+  "id": "v14-fluid-animation-physics",
+  "name": "v14-fluid-animation-physics",
+  "title": "V14: 消除抽搐 + 双节曲臂曲腿关节 + 挖掘机真实尺度物理 + 动态转场特效深化",
+  "description": "针对用户反馈：修复 timeline 姿态混合与步态差频抽搐 bug；升级角色四肢为带手肘与膝盖的双节铰链运动学；优化挖掘机画面尺度与沙坑草地场景自适应物理；重构全时动态无冻结转场系统；深化全片特效粒子；多 Agent 并行加速交付。",
+  "status": "in_progress",
+  "priority": "P1",
+  "creator": "yuhuxiao",
+  "assignee": "yuhuxiao",
+  "createdAt": "2026-10-04",
+  "completedAt": null,
+  "branch": "master",
+  "base_branch": "master",
+  "subtasks": [],
+  "children": [],
+  "parent": null,
+  "relatedFiles": ["web/src/v14/vector_pup.js", "web/src/v14/timeline.js", "web/src/v14/physics_dig.js", "web/src/v14/transitions.js"],
+  "notes": "",
+  "meta": {}
+}

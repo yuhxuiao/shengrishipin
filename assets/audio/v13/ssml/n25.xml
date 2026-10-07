@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: interactive_blowing | Note: 真实的吹气与互动，呼——带动开开一起吹灭蜡烛 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+6Hz" rate="+5%" volume="+0%">
+      开开，跟挖挖一起吹蜡烛喽！呼——！
+    </prosody>
+  </voice>
+</speak>

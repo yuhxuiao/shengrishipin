@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: effort_triumph | Note: 用力一拔随后的欢天喜地，胜利的欢跃 -->
+  <voice name="zh-CN-YunxiaNeural">
+    <prosody pitch="+10Hz" rate="+8%" volume="+0%">
+      嘿哟！出来啦！
+    </prosody>
+  </voice>
+</speak>

@@ -1,0 +1,140 @@
+{
+  "ok": true,
+  "error_type": "",
+  "error": "",
+  "session_id": "cbb3d204ab8d",
+  "query": "Remotion 2D cartoon animation techniques parallax spring easing professional motion design kids video",
+  "platform": "",
+  "model": "grok-4.2",
+  "primary_api_mode": "xai-responses",
+  "content": "**Remotion** is an excellent React-based library for **2D cartoon animation** in professional kids' videos (explainers, educational animations, YouTube shorts, etc.). Its frame-based rendering delivers pixel-perfect, deterministic output that's ideal for clean, vibrant 2D cartoon styles.\n\nThe techniques you asked for—**parallax** (for depth), **spring easing** (physics-based bouncy motion), and professional motion design—are all first-class citizens in Remotion. They feel natural, lightweight, and easy to iterate with AI tools like Claude.\n\n### 1. Spring Easing (Physics-Based Motion – The Go-To for Bouncy Kids Cartoon Elements)\nRemotion's built-in `spring()` creates realistic, rubber-band physics motion (inspired by Reanimated). It's the recommended way for entrance/exit animations, button presses, or character jumps—perfect for cute, energetic kids videos.\n\n```tsx\nimport { spring, useCurrentFrame, useVideoConfig } from \"remotion\";\n\nconst BounceIn = () => {\n  const frame = useCurrentFrame();\n  const { fps } = useVideoConfig();\n\nconst scale = spring({\n    frame,\n    fps,\n    config: {\n      damping: 10,   // Lower = bouncier, more cartoonish\n      stiffness: 100, // Higher = faster snap\n      mass: 0.5,     // Lower = lighter, playful\n    },\n    // durationInFrames: 60, // Optional: stretch the animation\n  });\n\nreturn (\n    <div\n      style={{\n        transform: `scale(${scale})`,\n        // rotation, opacity, etc. can be spring too\n      }}\n    >\n      {/* Your cute character or emoji */}\n    </div>\n  );\n};\n```\n\n**Pro tip for kids' videos**: Start with low damping + high stiffness for super bouncy effects. Combine with `interpolate()` for color or position changes. Add a tiny delay or stagger for multi-element scenes.\n\n### 2. Parallax (Multi-Layer Depth for Cinematic Kids Scenes)\nCreate that classic 2.5D parallax scrolling for landscapes, character backgrounds, or storybook pages. Foreground moves faster than background for instant depth and wow-factor.\n\n**Recommended ready-to-use template** (free, production-ready):  \n**Parallax Pan** from React Video Editor Remotion Templates.  \nIt uses `interpolate()` on `translateX` for multi-layer scrolling (background slow, midground medium, foreground fast). Perfect for stylized scene transitions or wide shots.[[1]](https://www.reactvideoeditor.com/remotion-templates/parallax-pan)\n\n**Manual parallax component** (build your own with layered `<AbsoluteFill>`):\n\n```tsx\nimport { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from \"remotion\";\n\nconst ParallaxScene = () => {\n  const frame = useCurrentFrame();\n  const { width, height, fps } = useVideoConfig();\n\n// Layer speeds (tune these!)\n  const bgSpeed = interpolate(frame, [0, 300], [0, -100], { extrapolateRight: \"clamp\" }) * 0.2;\n  const midSpeed = interpolate(frame, [0, 300], [0, -100], { extrapolateRight: \"clamp\" }) * 0.5;\n  const fgSpeed = interpolate(frame, [0, 300], [0, -100], { extrapolateRight: \"clamp\" }) * 1.0;\n\nreturn (\n    <AbsoluteFill style={{ background: \"#87CEEB\" }}> {/* Sky */}\n      {/* Background layer - slow */}\n      <AbsoluteFill style={{ transform: `translateX(${bgSpeed}px)` }}>\n        {/* Cartoon mountains or sky with subtle patterns */}\n      </AbsoluteFill>\n\n{/* Midground - medium */}\n      <AbsoluteFill style={{ transform: `translateX(${midSpeed}px)` }}>\n        {/* Trees, clouds, or cute characters */}\n      </AbsoluteFill>\n\n{/* Foreground - fast (parallax depth) */}\n      <AbsoluteFill style={{ transform: `translateX(${fgSpeed}px)` }}>\n        {/* Main character or text */}\n      </AbsoluteFill>\n    </AbsoluteFill>\n  );\n};\n```\n\n**Pro motion design tip**: Keep it subtle (0.2x–1.0x ratios). Add subtle parallax to UI elements too (buttons, text) for that premium feel without breaking the 2D flat cartoon style.\n\n### 3. Easing Functions (Smooth, Professional Timing)\nRemotion has built-in easing (via the `Easing` export) to control acceleration/deceleration—essential for polished, non-linear motion in kids' videos.\n\n```tsx\nimport { interpolate, Easing } from \"remotion\";\n\nconst slide = interpolate(\n  frame,\n  [0, 60],                    // input range\n  [-width, 0],                // output range\n  { easing: Easing.bezier(0.25, 0.1, 0.25, 1) } // custom curve or built-in\n);\n```\n\nCommon ones:\n- `Easing.ease` — slow start + slow end (most natural for characters)\n- `Easing.out(Easing.cubic)` — fast in, slow out (entry/exit feel)\n- `Easing.in(Easing.cubic)` — slow in, fast out\n- Custom `Easing.bezier()` for wacky cartoon bounces\n\nCombine with spring for hybrid motion (spring + easing override).\n\n### Full Professional Kids Video Example\n- Layer multiple parallax scenes\n- Add spring-animated characters (with `spring` + SVG or colored shapes)\n- Use Remotion Studio's preview + timeline for real-time tweaking\n- Export at 1080p/30fps or higher for crisp cartoon look\n\n**Extra 2D cartoon tips**:\n- Use `<Solid>` or `<Svg>` for flat-color characters (vector-sharp)\n- Animate opacity, rotation, and scale with the same techniques\n- For full characters: combine SVG morphing + spring scale\n\nThese techniques are 100% frame-accurate, server-side renderable, and lightning-fast. Start with the spring example above, drop in the parallax template, and you'll have a bouncy, deep, professional kids animation in minutes.\n\nWant a full starter project, AI prompt for Claude to generate the complete component, or a specific character animation example? Just let me know! 🚀",
+  "sources": [
+    {
+      "url": "https://www.reactvideoeditor.com/remotion-templates/parallax-pan",
+      "title": "1"
+    },
+    {
+      "url": "https://lillytechsystems.com/ai-school/remotion-claude/animations.html",
+      "provider": "tavily",
+      "title": "Animations & Effects in Remotion - AI School",
+      "description": "Title: Animations & Effects in Remotion - AI School\n# Animations & Effects. Master Remotion's animation system with spring physics, interpolation, easing functions, parallax, SVG animations, and learn how to prompt Claude Code for complex effects. ## Spring Animations. They are the recommended way to animate in Remotion:. It is the core building block for all animations:. import from \"remotion\" export const SlideIn const useCurrentFrame// Slide from -100px to 0px over frames 0-30 const interpolate// Input range (frames)// Output range (pixels) \"clamp\"// Fade from 0 to 1 over frames 0-20 const interpolate \"clamp\" return div`translateX(${translateX}px)` div. Easing functions control the rate of change in animations. Remotion provides built-in easing functions:. | **Easing.ease** | Slow start and end | General-purpose animations |. | **Easing.in(Easing.cubic)** | Slow start, fast end | Elements leaving the screen |. | **Easing.out(Easing.cubic)** | Fast start, slow end | Elements entering the screen |. | **Easing.bezier()** | Custom curve | Fine-tuned custom animations |. Claude Code Prompt for Parallax. \"Create a parallax scrolling scene with 3 layers: - Background (mountains): moves slowly at 0.2x speed - Midground (trees): moves at 0.5x speed - Foreground (text): moves at 1x speed All layers scroll from right to left over 5 seconds. ## SVG Animations. * **Path drawing:** Animate SVG paths from empty to fully drawn using `strokeDashoffset`. * **Icons:** Animate individual parts of SVG icons for visual interest. * **Charts:** Build animated pie charts, line graphs, and diagrams with SVG. Use Lottie animations (from LottieFiles or After Effects) in your Remotion videos:. Claude Code Prompt for Lottie. \"Install @remotion/lottie and add a Lottie animation from the file public/animation.json. The animation should play from frame 0 to completion, centered on screen. Add a text overlay below it that says 'Loading...' with a pulsing opacity animation.\". Common transitions between scenes that you can ask Claude Code to create:. ## Prompting Claude Code for Complex Animations. When requesting complex animations from Claude Code, be specific about:. * **Timing:** When does the animation start and end (in seconds or frames)? * **Staggering:** If multiple elements animate, how are they staggered? #### 💡 Try It: Create a Complex Animation. Ask Claude Code to create a video component with at least 3 different animation techniques: a spring animation for entrance, interpolation for continuous motion, and an easing-based exit."
+    }
+  ],
+  "sources_count": 2,
+  "primary_sources": [
+    {
+      "url": "https://www.reactvideoeditor.com/remotion-templates/parallax-pan",
+      "title": "1"
+    }
+  ],
+  "primary_sources_count": 1,
+  "extra_sources": [
+    {
+      "url": "https://lillytechsystems.com/ai-school/remotion-claude/animations.html",
+      "provider": "tavily",
+      "title": "Animations & Effects in Remotion - AI School",
+      "description": "Title: Animations & Effects in Remotion - AI School\n# Animations & Effects. Master Remotion's animation system with spring physics, interpolation, easing functions, parallax, SVG animations, and learn how to prompt Claude Code for complex effects. ## Spring Animations. They are the recommended way to animate in Remotion:. It is the core building block for all animations:. import from \"remotion\" export const SlideIn const useCurrentFrame// Slide from -100px to 0px over frames 0-30 const interpolate// Input range (frames)// Output range (pixels) \"clamp\"// Fade from 0 to 1 over frames 0-20 const interpolate \"clamp\" return div`translateX(${translateX}px)` div. Easing functions control the rate of change in animations. Remotion provides built-in easing functions:. | **Easing.ease** | Slow start and end | General-purpose animations |. | **Easing.in(Easing.cubic)** | Slow start, fast end | Elements leaving the screen |. | **Easing.out(Easing.cubic)** | Fast start, slow end | Elements entering the screen |. | **Easing.bezier()** | Custom curve | Fine-tuned custom animations |. Claude Code Prompt for Parallax. \"Create a parallax scrolling scene with 3 layers: - Background (mountains): moves slowly at 0.2x speed - Midground (trees): moves at 0.5x speed - Foreground (text): moves at 1x speed All layers scroll from right to left over 5 seconds. ## SVG Animations. * **Path drawing:** Animate SVG paths from empty to fully drawn using `strokeDashoffset`. * **Icons:** Animate individual parts of SVG icons for visual interest. * **Charts:** Build animated pie charts, line graphs, and diagrams with SVG. Use Lottie animations (from LottieFiles or After Effects) in your Remotion videos:. Claude Code Prompt for Lottie. \"Install @remotion/lottie and add a Lottie animation from the file public/animation.json. The animation should play from frame 0 to completion, centered on screen. Add a text overlay below it that says 'Loading...' with a pulsing opacity animation.\". Common transitions between scenes that you can ask Claude Code to create:. ## Prompting Claude Code for Complex Animations. When requesting complex animations from Claude Code, be specific about:. * **Timing:** When does the animation start and end (in seconds or frames)? * **Staggering:** If multiple elements animate, how are they staggered? #### 💡 Try It: Create a Complex Animation. Ask Claude Code to create a video component with at least 3 different animation techniques: a spring animation for entrance, interpolation for continuous motion, and an easing-based exit."
+    }
+  ],
+  "extra_sources_count": 1,
+  "source_warning": "extra_sources are retrieved in parallel and are not automatically used to verify generated content; use fetch on key URLs for claim-level evidence.",
+  "routing_decision": {
+    "docs_intent": false,
+    "zh_current_intent": false,
+    "web_current_intent": false,
+    "fetch_intent": false,
+    "supplemental_paths": [],
+    "validation_level": "balanced",
+    "fallback_mode": "auto",
+    "providers": "auto",
+    "main_search_chain": [
+      "xai-responses",
+      "openai-compatible"
+    ],
+    "openai_compatible_stream": true
+  },
+  "providers_used": [
+    "xAI Responses",
+    "tavily"
+  ],
+  "provider_attempts": [
+    {
+      "capability": "main_search",
+      "provider": "xAI Responses",
+      "status": "ok",
+      "error_type": "",
+      "error": "",
+      "elapsed_ms": 130667.22,
+      "result_count": 1
+    },
+    {
+      "capability": "web_search",
+      "provider": "tavily",
+      "status": "ok",
+      "error_type": "",
+      "error": "",
+      "elapsed_ms": 135831.99,
+      "result_count": 1
+    }
+  ],
+  "fallback_used": false,
+  "validation_level": "balanced",
+  "minimum_profile_ok": true,
+  "capability_status": {
+    "main_search": {
+      "configured": [
+        "xai-responses",
+        "openai-compatible"
+      ],
+      "fallback_chain": [
+        "xai-responses",
+        "openai-compatible"
+      ],
+      "ok": true
+    },
+    "web_search": {
+      "configured": [
+        "zhipu",
+        "tavily",
+        "firecrawl"
+      ],
+      "fallback_chain": [
+        "zhipu",
+        "tavily",
+        "firecrawl"
+      ],
+      "ok": true
+    },
+    "docs_search": {
+      "configured": [
+        "context7",
+        "exa"
+      ],
+      "fallback_chain": [
+        "context7",
+        "exa"
+      ],
+      "ok": true
+    },
+    "web_fetch": {
+      "configured": [
+        "tavily",
+        "firecrawl"
+      ],
+      "fallback_chain": [
+        "tavily",
+        "firecrawl"
+      ],
+      "ok": true
+    },
+    "vertical_search": {
+      "configured": [],
+      "fallback_chain": [
+        "anysearch"
+      ],
+      "experimental": true,
+      "ok": false
+    }
+  },
+  "elapsed_ms": 135832.03
+}

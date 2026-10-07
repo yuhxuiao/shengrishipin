@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: sing-song_playful | Note: 童谣般的节奏韵律，轻快跳跃的寻踪调 -->
+  <voice name="zh-CN-XiaoxiaoNeural">
+    <prosody pitch="+5Hz" rate="+4%" volume="+0%">
+      跟着小脚印，找一找，瞧一瞧~
+    </prosody>
+  </voice>
+</speak>

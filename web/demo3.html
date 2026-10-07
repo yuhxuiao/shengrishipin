@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>v7 关节绑定 demo</title>
+<style>html,body{margin:0;background:#111}canvas{display:block}</style>
+</head>
+<body>
+<canvas id="out" width="1920" height="1080"></canvas>
+<script src="src/engine.js"></script>
+<script src="src/camera.js"></script>
+<script src="src/rig.js"></script>
+<script src="src/demo3.js"></script>
+<script>
+const canvas = document.getElementById('out');
+const ctx = canvas.getContext('2d');
+window.ready = false;
+let PARTS_MODE = false;
+
+window.renderAt = function (t, type, q) {
+  if (PARTS_MODE) { /* 已绘制一次 */ } else drawFrameDemo3(ctx, Math.max(0, Math.min(t, DEMO3_TOTAL - 1e-3)));
+  return canvas.toDataURL(type || 'image/jpeg', q ?? .94);
+};
+window.renderSheet = function (ts, cols, w) {
+  const rows = Math.ceil(ts.length / cols);
+  const h = w * 9 / 16;
+  const sheet = document.createElement('canvas');
+  sheet.width = cols * w; sheet.height = rows * h;
+  const c2 = sheet.getContext('2d');
+  const ms = [];
+  ts.forEach((t, i) => {
+    const s = Date.now();
+    drawFrameDemo3(ctx, t);
+    c2.drawImage(canvas, (i % cols) * w, ((i / cols) | 0) * h, w, h);
+    ms.push(Date.now() - s);
+  });
+  return { url: sheet.toDataURL('image/jpeg', .9), ms };
+};
+
+(async () => {
+  const [bg, rig] = await Promise.all([
+    loadImg('../output/tests/ai/bg-party.png'),
+    loadRig('../output/tests/ai/kaikai-tpose.png', KK_DEF),
+  ]);
+  A3.bg = bg; A3.rig = rig;
+  if (location.hash === '#parts') { // 调试:各切件裁到 alpha 包围盒平铺检查
+    PARTS_MODE = true;
+    const c = document.getElementById('out'), x = c.getContext('2d');
+    x.fillStyle = '#e8e8e8'; x.fillRect(0, 0, 1920, 1080);
+    const names = ['body', ...KK_DEF.order];
+    names.forEach((n, i) => {
+      const pc = rig.parts[n].canvas;
+      const px = pc.getContext('2d').getImageData(0, 0, pc.width, pc.height).data;
+      let x0 = pc.width, y0 = pc.height, x1 = 0, y1 = 0;
+      for (let yy = 0; yy < pc.height; yy += 3) for (let xx = 0; xx < pc.width; xx += 3)
+        if (px[(yy * pc.width + xx) * 4 + 3] > 10) { if (xx < x0) x0 = xx; if (xx > x1) x1 = xx; if (yy < y0) y0 = yy; if (yy > y1) y1 = yy; }
+      const bw = x1 - x0 + 1, bh = y1 - y0 + 1;
+      const s = Math.min(440 / bw, 980 / bh);
+      x.save(); x.translate(10 + i * 475, 50); x.scale(s, s);
+      x.strokeStyle = '#f0f'; x.strokeRect(-2, -2, bw + 4, bh + 4);
+      x.drawImage(pc, x0, y0, bw, bh, 0, 0, bw, bh); x.restore();
+      x.fillStyle = '#000'; x.font = '28px sans-serif';
+      x.fillText(`${n} [${x0},${y0},${x1},${y1}]`, 10 + i * 475, 40);
+    });
+  }
+  window.ready = true;
+})();
+</script>
+</body>
+</html>

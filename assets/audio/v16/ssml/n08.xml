@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: rhythmic_working | Note: 少儿律动劳动号子，欢快开铲 -->
+  <voice name="zh-CN-XiaoxiaoNeural">
+    <prosody pitch="+5Hz" rate="+4%" volume="+0%">
+      挖呀挖，挖呀挖——
+    </prosody>
+  </voice>
+</speak>

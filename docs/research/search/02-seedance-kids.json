@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "query": "即梦 Seedance 2.0 制作儿童动画片 分镜 工作流 角色一致性 经验",
+  "provider": "zhipu",
+  "error_type": "rate_limited",
+  "error": "HTTP 429: Too Many Requests",
+  "elapsed_ms": 166.43
+}

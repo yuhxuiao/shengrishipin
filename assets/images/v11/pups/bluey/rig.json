@@ -1,0 +1,93 @@
+{
+  "scale_base": 1432,
+  "root": [
+    530,
+    1424
+  ],
+  "parts": {
+    "tail": {
+      "pivot_in_img": [
+        350,
+        100
+      ],
+      "pivot_from_root": [
+        -200,
+        -284
+      ],
+      "w": 420,
+      "h": 300
+    },
+    "leg_r": {
+      "pivot_in_img": [
+        130,
+        50
+      ],
+      "pivot_from_root": [
+        110,
+        -294
+      ],
+      "w": 260,
+      "h": 375
+    },
+    "leg_l": {
+      "pivot_in_img": [
+        130,
+        50
+      ],
+      "pivot_from_root": [
+        -110,
+        -294
+      ],
+      "w": 260,
+      "h": 375
+    },
+    "arm_r": {
+      "pivot_in_img": [
+        65,
+        265
+      ],
+      "pivot_from_root": [
+        220,
+        -634
+      ],
+      "w": 415,
+      "h": 470
+    },
+    "torso": {
+      "pivot_in_img": [
+        300,
+        70
+      ],
+      "pivot_from_root": [
+        0,
+        -674
+      ],
+      "w": 590,
+      "h": 480
+    },
+    "head": {
+      "pivot_in_img": [
+        330,
+        740
+      ],
+      "pivot_from_root": [
+        0,
+        -674
+      ],
+      "w": 630,
+      "h": 770
+    },
+    "arm_l": {
+      "pivot_in_img": [
+        215,
+        75
+      ],
+      "pivot_from_root": [
+        -220,
+        -654
+      ],
+      "w": 300,
+      "h": 490
+    }
+  }
+}

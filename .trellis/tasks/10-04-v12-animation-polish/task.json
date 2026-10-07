@@ -1,0 +1,20 @@
+{
+  "id": "v12-animation-polish",
+  "name": "v12-animation-polish",
+  "title": "V12: 表演 beats / 入出场 / 转场 / 配角脸 / 场景与特效升级",
+  "description": "用户反馈 v11 逻辑可以但太简陋: 动画、元素、动作、入场、出场与优秀 2D 动画片差距大。V12 在 v11 基础上做 track/beat 表演系统、转场合成、配角修复与表情、场景重绘、特效库、真实度量。实施由 Gemini 3.8 Flash 子代理完成。",
+  "status": "completed",
+  "priority": "P1",
+  "creator": "yuhuxiao",
+  "assignee": "yuhuxiao",
+  "createdAt": "2026-10-04",
+  "completedAt": "2026-10-04",
+  "branch": "master",
+  "base_branch": "master",
+  "subtasks": [],
+  "children": [],
+  "parent": null,
+  "relatedFiles": [".trellis/spec/frontend/v11-animation-language.md", ".trellis/tasks/10-04-v11-director-cut/prd.md"],
+  "notes": "",
+  "meta": {}
+}

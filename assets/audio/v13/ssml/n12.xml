@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: encouraging_gentle | Note: 温柔抚慰与积极鼓励，童趣引导 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+4Hz" rate="+4%" volume="+0%">
+      别着急，再来一铲！
+    </prosody>
+  </voice>
+</speak>

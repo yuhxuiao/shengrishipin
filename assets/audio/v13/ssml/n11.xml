@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: curious_leading | Note: 转换场景的明快引导，充满期待 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+6Hz" rate="+5%" volume="+0%">
+      第二个记号在沙坑里！
+    </prosody>
+  </voice>
+</speak>

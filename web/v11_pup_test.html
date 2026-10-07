@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>V11 Pup Bone Rig Test (Bluey & Bingo Separate Rows)</title>
+  <style>
+    body { margin: 0; background: #222; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    canvas { background: #333; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+  </style>
+</head>
+<body>
+  <canvas id="out" width="1920" height="1080"></canvas>
+  <script src="src/v11/pup.js"></script>
+  <script>
+    function loadImg(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = src;
+      });
+    }
+
+    async function loadPupData(name) {
+      const dir = `../assets/images/v11/pups/${name}`;
+      const rigResp = await fetch(`${dir}/rig.json`);
+      const rig = await rigResp.json();
+      const parts = ['head', 'torso', 'arm_l', 'arm_r', 'leg_l', 'leg_r', 'tail'];
+      const imgs = {};
+      await Promise.all(parts.map(async p => {
+        imgs[p] = await loadImg(`${dir}/${p}.png`);
+      }));
+      imgs.hat = await loadImg('../assets/images/v10/parts/party_hat.png').catch(() => null);
+      imgs.bone = await loadImg('../assets/images/v10/parts/bone.png').catch(() => null);
+      return { imgs, rig };
+    }
+
+    async function init() {
+      const canvas = document.getElementById('out');
+      const ctx = canvas.getContext('2d');
+
+      const [blueyData, bingoData] = await Promise.all([
+        loadPupData('bluey'),
+        loadPupData('bingo')
+      ]);
+
+      // 背景
+      ctx.fillStyle = '#6BA4FF';
+      ctx.fillRect(0, 0, 1920, 1080);
+      ctx.fillStyle = '#A3D977';
+      ctx.fillRect(0, 480, 1920, 60);
+      ctx.fillRect(0, 1000, 1920, 80);
+
+      const poses = ['stand', 'point', 'clap', 'hop', 'laugh', 'run', 'hug_bone', 'cheer'];
+      const cols = 8;
+      const cellW = 1920 / cols;
+
+      // 第一排: 布鲁伊 (Bluey)
+      ctx.fillStyle = '#0B2F6E';
+      ctx.font = 'bold 28px sans-serif';
+      ctx.fillText('BLUEY (POSES)', 30, 45);
+
+      poses.forEach((pose, idx) => {
+        const cx = idx * cellW + cellW / 2;
+        const groundY = 480;
+
+        ctx.fillStyle = '#0B2F6E';
+        ctx.font = 'bold 18px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(pose.toUpperCase(), cx, 75);
+
+        V11Pup.draw(ctx, blueyData, {
+          x: cx,
+          footY: groundY,
+          h: 360,
+          facing: 1,
+          pose: pose,
+          dy: pose === 'hop' ? -50 : 0,
+          hat: { visible: idx === 1 },
+        }, 0.5);
+      });
+
+      // 第二排: 宾果 (Bingo)
+      ctx.textAlign = 'left';
+      ctx.fillText('BINGO (POSES)', 30, 560);
+
+      poses.forEach((pose, idx) => {
+        const cx = idx * cellW + cellW / 2;
+        const groundY = 1000;
+
+        ctx.fillStyle = '#0B2F6E';
+        ctx.font = 'bold 18px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(pose.toUpperCase(), cx, 595);
+
+        V11Pup.draw(ctx, bingoData, {
+          x: cx,
+          footY: groundY,
+          h: 330,
+          facing: 1,
+          pose: pose,
+          dy: pose === 'hop' ? -45 : 0,
+          item: (pose === 'hug_bone' || idx === 1) ? 'bone' : null,
+          hat: { visible: idx === 7 },
+        }, 0.5);
+      });
+
+      window.ready = true;
+      window.renderAt = (t) => canvas.toDataURL('image/jpeg', 0.95);
+    }
+    init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>V8 模块化真实物理动画引擎</title>
+<style>
+  html,body{margin:0;background:#111;overflow:hidden;display:flex;justify-content:center;align-items:center;height:100vh}
+  canvas{display:block;max-width:100vw;max-height:100vh;aspect-ratio:16/9}
+</style>
+</head>
+<body>
+<canvas id="out" width="1920" height="1080"></canvas>
+<script src="src/engine.js"></script>
+<script src="src/camera.js"></script>
+<script src="src/demo8.js"></script>
+<script>
+function loadImg(src) {
+  return new Promise((res, rej) => {
+    const i = new Image();
+    i.onload = () => res(i);
+    i.onerror = rej;
+    i.src = src;
+  });
+}
+const canvas = document.getElementById('out');
+const ctx = canvas.getContext('2d');
+window.ready = false;
+
+window.renderAt = function (t, type, q) {
+  drawFrameDemo8(ctx, Math.max(0, Math.min(t, DEMO8_TOTAL - 1e-3)));
+  return canvas.toDataURL(type || 'image/jpeg', q ?? .94);
+};
+
+window.renderSheet = function (ts, cols, w) {
+  const rows = Math.ceil(ts.length / cols);
+  const h = w * 9 / 16;
+  const sheet = document.createElement('canvas');
+  sheet.width = cols * w; sheet.height = rows * h;
+  const c2 = sheet.getContext('2d');
+  const ms = [];
+  ts.forEach((t, i) => {
+    const s = Date.now();
+    drawFrameDemo8(ctx, t);
+    c2.drawImage(canvas, (i % cols) * w, ((i / cols) | 0) * h, w, h);
+    ms.push(Date.now() - s);
+  });
+  return { url: sheet.toDataURL('image/jpeg', .9), ms };
+};
+
+(async () => {
+  const [bg, body, boom, stick, sand] = await Promise.all([
+    loadImg('../output/tests/ai/bg-party.png'),
+    loadImg('../output/tests/v8/part_body.png'),
+    loadImg('../output/tests/v8/part_boom.png'),
+    loadImg('../output/tests/v8/part_stick.png'),
+    loadImg('../output/tests/v8/part_sand_mound.png'),
+  ]);
+  A8.bg = bg;
+  A8.body = body;
+  A8.boom = boom;
+  A8.stick = stick;
+  A8.sand = sand;
+  
+  // 默认画第0帧
+  drawFrameDemo8(ctx, 0);
+  window.ready = true;
+  console.log('V8 Rigged Animation Ready!');
+})();
+</script>
+</body>
+</html>

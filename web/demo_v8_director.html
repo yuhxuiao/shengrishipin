@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>V8 导演级分镜物理骨骼动画</title>
+<style>
+  html,body{margin:0;background:#111;overflow:hidden;display:flex;justify-content:center;align-items:center;height:100vh}
+  canvas{display:block;max-width:100vw;max-height:100vh;aspect-ratio:16/9}
+</style>
+</head>
+<body>
+<canvas id="out" width="1920" height="1080"></canvas>
+<script src="src/engine.js"></script>
+<script src="src/camera.js"></script>
+<script src="src/v8_director.js"></script>
+<script>
+function loadImg(src) {
+  return new Promise((res, rej) => {
+    const i = new Image();
+    i.onload = () => res(i);
+    i.onerror = rej;
+    i.src = src;
+  });
+}
+const canvas = document.getElementById('out');
+const ctx = canvas.getContext('2d');
+window.ready = false;
+
+window.renderAt = function (t, type, q) {
+  drawFrameDirector(ctx, Math.max(0, Math.min(t, V8_DIRECTOR_TOTAL - 1e-3)));
+  return canvas.toDataURL(type || 'image/jpeg', q ?? .94);
+};
+
+window.renderSheet = function (ts, cols, w) {
+  const rows = Math.ceil(ts.length / cols);
+  const h = w * 9 / 16;
+  const sheet = document.createElement('canvas');
+  sheet.width = cols * w; sheet.height = rows * h;
+  const c2 = sheet.getContext('2d');
+  const ms = [];
+  ts.forEach((t, i) => {
+    const s = Date.now();
+    drawFrameDirector(ctx, t);
+    c2.drawImage(canvas, (i % cols) * w, ((i / cols) | 0) * h, w, h);
+    ms.push(Date.now() - s);
+  });
+  return { url: sheet.toDataURL('image/jpeg', .9), ms };
+};
+
+(async () => {
+  const [bg_party, body, boom, stick, mound_full, mound_dug, dirt_payload, guide_hands] = await Promise.all([
+    loadImg('../output/tests/ai/bg-party.png'),
+    loadImg('../output/tests/v8/body_v8_pure.png'),
+    loadImg('../output/tests/v8/boom_v8_pure.png'),
+    loadImg('../output/tests/v8/stick_v8_pure.png'),
+    loadImg('../output/tests/v8/mound_earth_full.png'),
+    loadImg('../output/tests/v8/mound_earth_dug.png'),
+    loadImg('../output/tests/v8/dirt_payload.png'),
+    loadImg('../output/tests/v8/guide_hands_up.png'),
+  ]);
+  D8.bg_party = bg_party;
+  D8.body = body;
+  D8.boom = boom;
+  D8.stick = stick;
+  D8.mound_full = mound_full;
+  D8.mound_dug = mound_dug;
+  D8.dirt_payload = dirt_payload;
+  D8.guide_hands = guide_hands;
+
+  drawFrameDirector(ctx, 0);
+  window.ready = true;
+  console.log('V8 Director Ready!');
+})();
+</script>
+</body>
+</html>

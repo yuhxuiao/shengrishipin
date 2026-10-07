@@ -1,0 +1,635 @@
+{
+  "fps": 30,
+  "total": 49.0,
+  "vo": [
+    {
+      "id": "k1",
+      "src": "assets/audio/s02_0.mp3",
+      "from": 0.15,
+      "to": 0.8,
+      "at": 7.2,
+      "speaker": "kaikai",
+      "text": "大家好!"
+    },
+    {
+      "id": "k2",
+      "src": "assets/audio/v9r3/k2.mp3",
+      "from": 0.0,
+      "to": 1.75,
+      "at": 8.3,
+      "speaker": "kaikai",
+      "text": "我叫挖挖!"
+    },
+    {
+      "id": "k3",
+      "src": "assets/audio/s02_0.mp3",
+      "from": 2.59,
+      "to": 4.82,
+      "at": 10.6,
+      "speaker": "kaikai",
+      "text": "今天是2026年10月18日,"
+    },
+    {
+      "id": "k4",
+      "src": "assets/audio/s02_0.mp3",
+      "from": 5.08,
+      "to": 6.64,
+      "at": 13.2,
+      "speaker": "kaikai",
+      "text": "是小开开的两岁生日!"
+    },
+    {
+      "id": "k5",
+      "src": "assets/audio/s02_0.mp3",
+      "from": 6.99,
+      "to": 9.46,
+      "at": 15.3,
+      "speaker": "kaikai",
+      "text": "我要举办一场超级热闹的生日派对!"
+    },
+    {
+      "id": "n1",
+      "src": "assets/audio/s03_0.mp3",
+      "from": 0.17,
+      "to": 2.49,
+      "at": 19.6,
+      "speaker": "narrator",
+      "text": "现在,请我们的小寿星开开,"
+    },
+    {
+      "id": "n2",
+      "src": "assets/audio/v9r3/n2.mp3",
+      "from": 0.0,
+      "to": 2.47,
+      "at": 22.2,
+      "speaker": "narrator",
+      "text": "跟挖挖一起拍拍手!"
+    },
+    {
+      "id": "n3",
+      "src": "assets/audio/v9r3/n3.mp3",
+      "from": 0.0,
+      "to": 3.77,
+      "at": 24.9,
+      "speaker": "narrator",
+      "text": "挖挖举得好高呀!宝宝也举举小手!"
+    },
+    {
+      "id": "n4",
+      "src": "assets/audio/v9r3/n4.mp3",
+      "from": 0.0,
+      "to": 2.98,
+      "at": 28.9,
+      "speaker": "narrator",
+      "text": "挖斗张开啦,咔嚓咔嚓!"
+    },
+    {
+      "id": "n5",
+      "src": "assets/audio/v9r3/n5.mp3",
+      "from": 0.0,
+      "to": 2.66,
+      "at": 32.5,
+      "speaker": "narrator",
+      "text": "挖挖挖土啦,挖呀挖!"
+    },
+    {
+      "id": "n6",
+      "src": "assets/audio/v9r3/n6.mp3",
+      "from": 0.0,
+      "to": 2.4,
+      "at": 35.5,
+      "speaker": "narrator",
+      "text": "抬起来啦,好高呀!"
+    },
+    {
+      "id": "n7",
+      "src": "assets/audio/v9r3/n7.mp3",
+      "from": 0.0,
+      "to": 3.77,
+      "at": 38.2,
+      "speaker": "narrator",
+      "text": "哇——做得太棒啦!给挖挖鼓鼓掌!"
+    },
+    {
+      "id": "n8",
+      "src": "assets/audio/s04_0.mp3",
+      "from": 4.54,
+      "to": 5.3,
+      "at": 42.1,
+      "speaker": "narrator",
+      "text": "再来一次:"
+    },
+    {
+      "id": "n9",
+      "src": "assets/audio/v9r3/n9.mp3",
+      "from": 0.0,
+      "to": 1.49,
+      "at": 43.0,
+      "speaker": "narrator",
+      "text": "挖呀挖,"
+    },
+    {
+      "id": "n10",
+      "src": "assets/audio/v9r3/n10.mp3",
+      "from": 0.0,
+      "to": 1.42,
+      "at": 44.7,
+      "speaker": "narrator",
+      "text": "抬起来!"
+    },
+    {
+      "id": "n11",
+      "src": "assets/audio/v9r3/n11.mp3",
+      "from": 0.0,
+      "to": 2.66,
+      "at": 46.25,
+      "speaker": "narrator",
+      "text": "又挖到啦!太厉害啦!"
+    }
+  ],
+  "beats": {
+    "engine_on": 1.7,
+    "drive_start": 1.9,
+    "arrive": 4.8,
+    "turn_end": 5.95,
+    "settle": 6.0,
+    "cut_b": 7.0,
+    "wave_start": 7.15,
+    "wave_end": 9.35,
+    "door_glint": 8.95,
+    "cut_c": 10.2,
+    "date_card": 11.6,
+    "balloon_rise": 13.3,
+    "balloon_sparkle": 13.9,
+    "party_hop": 14.2,
+    "cut_d": 15.0,
+    "confetti": 17.8,
+    "cut_e": 19.2,
+    "dance_start": 22.3,
+    "dance_end": 24.6,
+    "raise_squat": 25.0,
+    "raise_up": 25.3,
+    "raise_peak": 25.8,
+    "raise_hold_end": 28.5,
+    "grab1": 29.9,
+    "grab2": 30.4,
+    "grab3": 30.9,
+    "lower_arm": 31.9,
+    "cut_f": 32.1,
+    "swing_in": 32.0,
+    "dig1_start": 32.7,
+    "dig1_contact": 33.9,
+    "dig1_end": 34.5,
+    "lift1_curl": 35.6,
+    "lift1_up": 35.9,
+    "lift1_top": 36.9,
+    "praise_badge": 38.5,
+    "wiggle_start": 38.6,
+    "dump": 40.6,
+    "dump_thud": 41.0,
+    "cut_g": 42.3,
+    "dig2_start": 43.2,
+    "dig2_contact": 44.2,
+    "lift2_curl": 44.8,
+    "lift2_up": 45.0,
+    "lift2_top": 45.7,
+    "cut_h": 45.9,
+    "swing_back": 45.9,
+    "final_wave": 46.6,
+    "wink": 47.6,
+    "fade_start": 48.3
+  },
+  "sfx": [
+    {
+      "name": "engine",
+      "at": "engine_on",
+      "dur": 4.3,
+      "gain": -13,
+      "pan": [
+        0.55,
+        0.0
+      ],
+      "fade": [
+        0.4,
+        0.7
+      ]
+    },
+    {
+      "name": "clank",
+      "at": "drive_start",
+      "dur": 3.7,
+      "gain": -21,
+      "pan": [
+        0.5,
+        0.0
+      ],
+      "fade": [
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "name": "boing",
+      "at": "settle",
+      "gain": -14
+    },
+    {
+      "name": "pop",
+      "at": "cut_b",
+      "gain": -22
+    },
+    {
+      "name": "sparkle",
+      "at": "door_glint",
+      "gain": -16,
+      "pan": [
+        0.35,
+        0.35
+      ]
+    },
+    {
+      "name": "pop",
+      "at": "date_card",
+      "gain": -21,
+      "pan": [
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "name": "fwoop",
+      "at": "balloon_rise",
+      "gain": -15,
+      "pan": [
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "name": "sparkle",
+      "at": "balloon_sparkle",
+      "gain": -15,
+      "pan": [
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "name": "hop",
+      "at": "party_hop",
+      "gain": -11
+    },
+    {
+      "name": "confetti",
+      "at": "confetti",
+      "gain": -10
+    },
+    {
+      "name": "pop",
+      "at": 22.2,
+      "gain": -21
+    },
+    {
+      "name": "boing",
+      "at": 22.35,
+      "gain": -15
+    },
+    {
+      "name": "boing",
+      "at": 22.95,
+      "gain": -15
+    },
+    {
+      "name": "boing",
+      "at": 23.55,
+      "gain": -15
+    },
+    {
+      "name": "boing",
+      "at": 24.15,
+      "gain": -15
+    },
+    {
+      "name": "pop",
+      "at": 24.9,
+      "gain": -21
+    },
+    {
+      "name": "whoosh",
+      "at": "raise_up",
+      "gain": -14
+    },
+    {
+      "name": "sparkle",
+      "at": "raise_peak",
+      "gain": -13
+    },
+    {
+      "name": "click",
+      "at": "grab1",
+      "gain": -14,
+      "pan": [
+        -0.2,
+        -0.2
+      ]
+    },
+    {
+      "name": "click",
+      "at": "grab2",
+      "gain": -14,
+      "pan": [
+        -0.2,
+        -0.2
+      ]
+    },
+    {
+      "name": "click",
+      "at": "grab3",
+      "gain": -14,
+      "pan": [
+        -0.2,
+        -0.2
+      ]
+    },
+    {
+      "name": "whir",
+      "at": "lower_arm",
+      "gain": -20
+    },
+    {
+      "name": "whir",
+      "at": "swing_in",
+      "gain": -18
+    },
+    {
+      "name": "pop",
+      "at": 32.45,
+      "gain": -22
+    },
+    {
+      "name": "whir",
+      "at": "dig1_start",
+      "gain": -21
+    },
+    {
+      "name": "crunch",
+      "at": "dig1_contact",
+      "gain": -9,
+      "pan": [
+        -0.25,
+        -0.25
+      ]
+    },
+    {
+      "name": "scoop",
+      "at": "lift1_curl",
+      "gain": -13,
+      "pan": [
+        -0.25,
+        -0.25
+      ]
+    },
+    {
+      "name": "whir",
+      "at": "lift1_up",
+      "gain": -18
+    },
+    {
+      "name": "pop",
+      "at": 35.45,
+      "gain": -22
+    },
+    {
+      "name": "ding",
+      "at": "praise_badge",
+      "gain": -11
+    },
+    {
+      "name": "patter",
+      "at": "dump",
+      "gain": -13,
+      "pan": [
+        -0.25,
+        -0.25
+      ]
+    },
+    {
+      "name": "thud",
+      "at": "dump_thud",
+      "gain": -12,
+      "pan": [
+        -0.25,
+        -0.25
+      ]
+    },
+    {
+      "name": "pop",
+      "at": 42.95,
+      "gain": -22
+    },
+    {
+      "name": "whir",
+      "at": "dig2_start",
+      "gain": -21
+    },
+    {
+      "name": "crunch",
+      "at": "dig2_contact",
+      "gain": -9,
+      "pan": [
+        -0.25,
+        -0.25
+      ]
+    },
+    {
+      "name": "scoop",
+      "at": "lift2_curl",
+      "gain": -13,
+      "pan": [
+        -0.25,
+        -0.25
+      ]
+    },
+    {
+      "name": "whir",
+      "at": "lift2_up",
+      "gain": -18
+    },
+    {
+      "name": "pop",
+      "at": 44.65,
+      "gain": -22
+    },
+    {
+      "name": "whir",
+      "at": "swing_back",
+      "gain": -20
+    },
+    {
+      "name": "patter",
+      "at": 46.15,
+      "gain": -15,
+      "pan": [
+        -0.2,
+        -0.2
+      ]
+    },
+    {
+      "name": "sparkle",
+      "at": "wink",
+      "gain": -14
+    },
+    {
+      "name": "applause",
+      "at": 24.55,
+      "gain": -16,
+      "pan": [
+        0.3,
+        0.2
+      ]
+    },
+    {
+      "name": "sparkle",
+      "at": 34.55,
+      "gain": -15,
+      "pan": [
+        -0.2,
+        -0.15
+      ]
+    }
+  ],
+  "music": {
+    "src": "assets/bgm/Carefree.mp3",
+    "from": 0.0,
+    "gain": -17,
+    "duck": -8,
+    "fadeIn": 1.5,
+    "fadeOut": 2.6
+  },
+  "ui": [
+    {
+      "type": "card",
+      "text": "看!是谁来了呀?",
+      "icon": "wave",
+      "from": 0.9,
+      "to": 3.4
+    },
+    {
+      "type": "card",
+      "text": "小开开,跟挖挖挥挥小手!",
+      "icon": "wave",
+      "from": 7.0,
+      "to": 10.1
+    },
+    {
+      "type": "guide",
+      "action": "wave",
+      "from": 7.2,
+      "to": 9.9
+    },
+    {
+      "type": "date",
+      "text": "2026.10.18",
+      "sub": "开开两岁啦",
+      "from": 11.6,
+      "to": 14.3
+    },
+    {
+      "type": "card",
+      "text": "跟挖挖拍拍手!",
+      "icon": "wave",
+      "from": 22.2,
+      "to": 24.8
+    },
+    {
+      "type": "guide",
+      "action": "wave",
+      "from": 22.3,
+      "to": 24.5
+    },
+    {
+      "type": "card",
+      "text": "宝宝举举小手!",
+      "icon": "raise",
+      "from": 24.95,
+      "to": 28.4
+    },
+    {
+      "type": "guide",
+      "action": "raise",
+      "from": 25.1,
+      "to": 28.45
+    },
+    {
+      "type": "card",
+      "text": "咔嚓咔嚓!",
+      "icon": "grab",
+      "from": 28.95,
+      "to": 31.8
+    },
+    {
+      "type": "guide",
+      "action": "grab",
+      "from": 29.1,
+      "to": 31.7
+    },
+    {
+      "type": "card",
+      "text": "挖呀挖!",
+      "icon": "dig",
+      "from": 32.45,
+      "to": 35.0
+    },
+    {
+      "type": "guide",
+      "action": "dig",
+      "from": 32.5,
+      "to": 34.7
+    },
+    {
+      "type": "card",
+      "text": "好高呀!",
+      "icon": "lift",
+      "from": 35.5,
+      "to": 38.1
+    },
+    {
+      "type": "guide",
+      "action": "lift",
+      "from": 35.6,
+      "to": 37.9
+    },
+    {
+      "type": "badge",
+      "text": "太棒啦!",
+      "from": 38.5,
+      "to": 42.0
+    },
+    {
+      "type": "card",
+      "text": "挖呀挖!",
+      "icon": "dig",
+      "from": 42.8,
+      "to": 45.3
+    },
+    {
+      "type": "guide",
+      "action": "dig",
+      "from": 43.0,
+      "to": 44.5
+    },
+    {
+      "type": "card",
+      "text": "抬起来!",
+      "icon": "lift",
+      "from": 45.4,
+      "to": 47.9
+    },
+    {
+      "type": "guide",
+      "action": "lift",
+      "from": 44.7,
+      "to": 45.8
+    }
+  ]
+}

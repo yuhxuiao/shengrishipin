@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: teamwork_effort | Note: 仗义热心的小伙伴号子，一二起！ -->
+  <voice name="zh-CN-YunxiNeural">
+    <prosody pitch="+8Hz" rate="+5%" volume="+0%">
+      挖挖来帮你！一、二、起！
+    </prosody>
+  </voice>
+</speak>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: sparkle_blessing | Note: 星光璀璨的美好祝福，愿望成真 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+6Hz" rate="+3%" volume="+0%">
+      吹灭蜡烛，愿望成真啦！
+    </prosody>
+  </voice>
+</speak>

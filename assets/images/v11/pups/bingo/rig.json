@@ -1,0 +1,93 @@
+{
+  "scale_base": 2736,
+  "root": [
+    825,
+    2722
+  ],
+  "parts": {
+    "tail": {
+      "pivot_in_img": [
+        380,
+        220
+      ],
+      "pivot_from_root": [
+        -475,
+        -762
+      ],
+      "w": 460,
+      "h": 550
+    },
+    "leg_r": {
+      "pivot_in_img": [
+        200,
+        90
+      ],
+      "pivot_from_root": [
+        175,
+        -572
+      ],
+      "w": 420,
+      "h": 710
+    },
+    "leg_l": {
+      "pivot_in_img": [
+        220,
+        90
+      ],
+      "pivot_from_root": [
+        -165,
+        -572
+      ],
+      "w": 430,
+      "h": 710
+    },
+    "arm_r": {
+      "pivot_in_img": [
+        105,
+        125
+      ],
+      "pivot_from_root": [
+        435,
+        -1222
+      ],
+      "w": 475,
+      "h": 850
+    },
+    "torso": {
+      "pivot_in_img": [
+        465,
+        80
+      ],
+      "pivot_from_root": [
+        0,
+        -1342
+      ],
+      "w": 1020,
+      "h": 880
+    },
+    "head": {
+      "pivot_in_img": [
+        505,
+        1365
+      ],
+      "pivot_from_root": [
+        0,
+        -1342
+      ],
+      "w": 1030,
+      "h": 1405
+    },
+    "arm_l": {
+      "pivot_in_img": [
+        335,
+        125
+      ],
+      "pivot_from_root": [
+        -345,
+        -1222
+      ],
+      "w": 460,
+      "h": 890
+    }
+  }
+}

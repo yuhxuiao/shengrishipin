@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>V12 特效与转场验证测试页</title>
+<style>
+  @font-face {
+    font-family: 'ZCOOL KuaiLe';
+    src: url('fonts/ZCOOLKuaiLe-Regular.ttf') format('truetype');
+    font-display: block;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0D1B2A;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  canvas {
+    display: block;
+    max-width: 100vw;
+    max-height: 100vh;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+  }
+</style>
+</head>
+<body>
+<canvas id="out" width="1920" height="1080"></canvas>
+
+<!-- 加载待测试系统 -->
+<script src="src/v12/fx.js"></script>
+<script src="src/v12/transitions.js"></script>
+<script src="src/v12/titles.js"></script>
+
+<!-- 测试驱动程序 -->
+<script src="src/v12/test_fx.js"></script>
+</body>
+</html>

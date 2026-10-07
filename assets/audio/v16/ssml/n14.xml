@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: lively_announcement | Note: 宾果飞奔入场的活泼通报 -->
+  <voice name="zh-CN-XiaoxiaoNeural">
+    <prosody pitch="+6Hz" rate="+6%" volume="+0%">
+      快看！宾果也跑来帮忙啦！
+    </prosody>
+  </voice>
+</speak>

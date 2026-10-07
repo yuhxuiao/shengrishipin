@@ -1,0 +1,22 @@
+# 输出与缓存
+output/*
+!output/.gitkeep
+web/out/
+archive/
+scratch/
+scratch_qa/
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+
+# 调研克隆的第三方仓库(仅本机参考,含外部密钥,不入库)
+docs/research/repos/
+
+# 密钥与本地配置(不入库)
+*.key
+.secrets/
+config.local.*
+
+# 素材占位目录保留
+!assets/**/.gitkeep

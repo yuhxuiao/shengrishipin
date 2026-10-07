@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: interactive_cheer | Note: 呼唤宝宝参与互动的热情互动调，齐声呐喊 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+10Hz" rate="+12%" volume="+0%">
+      开开，大声给挖挖加油：加油！加油！
+    </prosody>
+  </voice>
+</speak>

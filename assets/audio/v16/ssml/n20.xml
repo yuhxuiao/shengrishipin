@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: wonder_climax | Note: 宝藏露角的震撼惊奇，超大体量 -->
+  <voice name="zh-CN-XiaoxiaoNeural">
+    <prosody pitch="+7Hz" rate="+6%" volume="+0%">
+      露出来啦！是一个超级大礼物！
+    </prosody>
+  </voice>
+</speak>

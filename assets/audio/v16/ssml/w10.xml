@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: affectionate_friendship | Note: 真挚宠溺的伙伴祝福，健康快乐长大的深情祝愿 -->
+  <voice name="zh-CN-YunxiNeural">
+    <prosody pitch="+7Hz" rate="+8%" volume="+0%">
+      开开！两周岁生日快乐！你要健康快乐地长大哦！
+    </prosody>
+  </voice>
+</speak>

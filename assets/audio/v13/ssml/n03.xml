@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: mysterious_playful | Note: 俏皮好奇的悬念引介，大任务充满未知惊喜 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+4Hz" rate="+2%" volume="+0%">
+      挖挖今天，有一个超级神秘的大任务！
+    </prosody>
+  </voice>
+</speak>

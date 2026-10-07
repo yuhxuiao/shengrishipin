@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: magical_warmth | Note: 烛光摇曳的温暖宁静，神圣美好的生日瞬间 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+5Hz" rate="+2%" volume="+0%">
+      两岁的生日蜡烛点亮啦！
+    </prosody>
+  </voice>
+</speak>

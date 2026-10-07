@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: effort | Note: 使劲用力的呐喊重音，力量感与拼搏感拉满 -->
+  <voice name="zh-CN-YunxiaNeural">
+    <prosody pitch="+6Hz" rate="-4%" volume="+0%">
+      加把劲！嘿——哟！
+    </prosody>
+  </voice>
+</speak>

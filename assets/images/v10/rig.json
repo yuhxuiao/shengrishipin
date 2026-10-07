@@ -1,0 +1,144 @@
+{
+  "comment": "v10 绑定 v7 (09-30): v6 骨骼/铰点 + dig v2 物理节奏 (2.4s) + lift/lower/cheer + 审阅分层协议",
+  "parts": {
+    "body": {
+      "file": "assets/images/v10/parts/body.png",
+      "size": [
+        819,
+        961
+      ]
+    },
+    "boom": {
+      "file": "assets/images/v10/parts/boom.png",
+      "size": [
+        369,
+        885
+      ]
+    },
+    "stick": {
+      "file": "assets/images/v10/parts/stick.png",
+      "size": [
+        393,
+        785
+      ]
+    },
+    "bucket": {
+      "file": "assets/images/v10/parts/bucket.png",
+      "size": [
+        551,
+        598
+      ]
+    },
+    "track": {
+      "file": "assets/images/v10/parts/track.png",
+      "size": [
+        983,
+        401
+      ]
+    }
+  },
+  "pivots": {
+    "boom_root": {
+      "part": "boom",
+      "xy": [
+        95,
+        790
+      ],
+      "note": "根铰盖中心 (navy 质心)"
+    },
+    "boom_elbow": {
+      "part": "boom",
+      "xy": [
+        281,
+        95
+      ],
+      "note": "肘铰盖中心 (navy 质心; v1 [260,80] 偏 26px 已修正)"
+    },
+    "stick_elbow": {
+      "part": "stick",
+      "xy": [
+        83,
+        86
+      ],
+      "note": "肘孔中心 r22 (alpha 孔心)"
+    },
+    "stick_bucket": {
+      "part": "stick",
+      "xy": [
+        300,
+        698
+      ],
+      "note": "铲斗孔中心 r23 (alpha 孔心)"
+    },
+    "bucket_pin": {
+      "part": "bucket",
+      "xy": [
+        215,
+        65
+      ],
+      "note": "铰孔中心 (navy 质心)"
+    },
+    "body_root": {
+      "part": "body",
+      "xy": [
+        55,
+        740
+      ],
+      "note": "根铰贴附位 v6: 全入车身被完全遮挡 (铰盖 r45, 中心 x≥673 装配), 臂从车身后伸出"
+    }
+  },
+  "z_order": [
+    "track",
+    "boom",
+    "body",
+    "stick",
+    "bucket"
+  ],
+  "assembly": {
+    "track_ground_overlap": 20,
+    "body_track_overlap": 70,
+    "neutral_pose_deg": {
+      "boom": 47.5,
+      "stick": -26,
+      "bucket": -5
+    },
+    "angle_convention": "绝对世界角, 度, 视觉逆时针为正; boom 正=向左上方扬, stick 负=向左摆",
+    "neutral_note": "中性 v6: 齿(328,1143)+底(158,1143)双贴地, 斗背(437,994) 避让履带; idle 全组合浮动侵入 0",
+    "bucket_hinge_pin": "铲斗铰 (stick_bucket↔bucket_pin) 下层无盖, 程序化垫销钉 navy r26 + 蓝芯 r10 防透底",
+    "track_clearance": "铲斗三点 (teeth/belly/back[468,400]) 禁区: x>485 && y>745 (履带左缘 505 内缩 20px); probe 60Hz 扫描侵入点数=0 (dig/wave/idle)",
+    "interpolation": "Fritsch-Carlson 单调三次样条 (v6 用户门禁治抽搐): C1 速度连续; 单调段保单调不超调, 关键帧约束成立即全程成立; 循环边界切线周期延拓"
+  },
+  "physics": {
+    "cylinders": "程序化绘制: 动臂油缸=车身 [120,780]→动臂 [125,420], 斗杆油缸=动臂 [184,400]→斗杆 [140,90] (v3 挂点全部按板件 alpha 轮廓实测, 在实体内); 缸筒定长比+活塞杆随动, 行程≥0.72L0",
+    "constraints": [
+      "履带贴地不滑移",
+      "车身 bob 在履带上方悬挂位",
+      "squash<=0.12",
+      "铲斗触地贴地挤土: 咬土帧齿尖穿透≤12 (squash 下沉), 其余帧齿尖/斗底离地≥-6",
+      "铰盖不压脸: 全程 elbowW.x/hingeW.x ≤640 (脸左缘 638), 遮脸帧数=0 (probe 60Hz 扫描)"
+    ],
+    "carried_from_v9": true
+  },
+  "actions_calibrated": {
+    "dig_2s": "[已废弃, 见 dig_2.4s_v2] v6: 中性(47.5,-26,-5) → A(47.5,-21.5,-7) → B(49,-30,-0.5) → 卷(50.5,-29.5,15) → 拔(63,-40.5,38) → C(62.5,-38,49) → 翻(55,-31,35)(50,-38.5,20)(45,-34.5,0)(41.5,-27,-19.5) → D(26.5,-18.5,-45) → 收(35,-22.5,-36)(40,-25,-24)(44,-27.5,-14) → 回位; F-C 样条插值",
+    "wave_2s": "v6 中心 (28,-65,14) teeth(300,799) 离 350, stick ±10/bucket ±8; 腾空 ≥228",
+    "idle_4s": "中性 ±1.5-2° 呼吸; 全组合浮动扫描: 履带侵入 0",
+    "dig_2.4s_v2": "[已废弃, 见 dig_2.4s_v3] 物理节奏重排: 下压0.30/蓄力0.15/刮卷0.50/卷拔0.50/举升0.25/翻回0.52 (翻a/b/1/2/3 全引导链), 砍\"D 空中翻斗卸土\" V 形折返段 (急动 25539°/s² 根源); 回位 0.20; F-C 样条",
+    "dig_2.4s_v3": "真机相位 (用户\"挖土和实际不符\"后重做): 扎土 A 远点 (51.5,-30,-0.5) teeth 265 土堆远缘 → 蓄力 0.14s squash 0.04 → 向车身拉刮 (刮程 75px, 装配坐标 x 递增=向履带, B 近点 (48,-21,-7) teeth 340, 斗背距轮心 227>222 避让) → 卷斗锁土 (51,-36,12) → 卷拔 (56,-41,22) → 拔起 (63,-40.5,38) → C 举升 (62.5,-38,49) → 翻 a/b/1/2/3 全引导链 (禁跳帧=F-C 走捷径侵入) → 回中性; 逆解带轮圆避让约束; L1 侵入 0/穿透≤15px 真机刮痕 + L2 硬顿挫 0/停顿 0",
+    "lift_1.2s": "中性→C (复用 dig 补/卷拔中/拔/C 链); L1+L2 全绿",
+    "lower_1.2s": "C→翻 a/b/1/2/3→收 3 落地 (全程 dig 验证链, 禁跳帧); 落地 squash 0.045 压实; L1 侵入 0 + L2 全绿",
+    "cheer_2s": "庆祝跳: 斗保持 (44,-27.5,-14) 落地守礼物, 车身 bob ±8 0.5s/跳 + squash; 替代 wave 挥斗 (防甩礼物叙事 bug); L1+L2 全绿",
+    "review_protocol": "审阅分层 v10-animation-quality.md: L1 位置 probe (含 pose 冻结帧) + L2 运动学 probe_kin (30Hz, 硬顿挫 4500 线) + L3 连续帧条目检 + L4 agy 静帧 (仅结构/风格); agy 视频/动态结论不作验收依据 (抽帧 ~1fps); agy 音频评审已证伪 (不读音频读文件系统编造, 报过物理不可能的'boing 高频') → 音频验收=客观测量 (loudnorm/STFT/峰值帽) + 用户亲耳; 混音中间文件禁 float 配 PCM 头 (v2 全曲方波失真根因)"
+  },
+  "expressions": {
+    "note": "眨眼盖片 v3: body 局部椭圆 clip + 弧形睑缘(向下微凸包眼球) + 近全闭 ∩ 上拱闭眼弧 (对齐 wink 定稿; v2 矩形剪切+◡ 反弧 BLOCKER 已修); 眼/眉/嘴差分部件留待后续从 wink/laugh 差分图裁切",
+    "face_anchor": {
+      "part": "body",
+      "xy": [
+        300,
+        560
+      ],
+      "note": "双眼中心区域"
+    }
+  }
+}

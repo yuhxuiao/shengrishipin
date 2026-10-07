@@ -1,0 +1,2 @@
+{"file": ".trellis/spec/frontend/v10-animation-quality.md", "reason": "Pure-time motion, collision probes and audio safety"}
+{"file": ".trellis/spec/frontend/v11-animation-language.md", "reason": "World/camera separation and reaction staging, scoped to sample"}

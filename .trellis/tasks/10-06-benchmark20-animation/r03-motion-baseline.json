@@ -1,0 +1,12 @@
+{
+  "samples": 1201,
+  "hz": 60,
+  "stateSha256": "944b9638a151e428a7985a09fb7c830258f746b39b7d69424171dff036618b1c",
+  "files": {
+    "shots.js": "14bbe10364c7cd7ee75d49934bf45f30284cc4de45c997c1a4b08f50f1432dcd",
+    "pose.js": "2784fa0a0a81b70c21864ef78dfec807a81cc5985daed5ae02fdded201646c9e",
+    "dig.js": "357e17852df6f275ac3f128166627e9e29f5d96b62d906d7d836c092616caa65",
+    "scene.js": "a99fbb031a7a2d378460075bc06f05ac8036f6cc2e8b6e79a87d3b6e89b4636d",
+    "main.js": "c21ff38030dc0faac1d864f2f489a16c465d16048f1142f06c4fce70b1efecdc"
+  }
+}

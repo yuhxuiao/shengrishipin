@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="zh-CN">
+  <!-- Emotion: interactive_encouraging | Note: 热情洋溢的亲子互动指令，邀请开开拍手参与 -->
+  <voice name="zh-CN-XiaoyiNeural">
+    <prosody pitch="+6Hz" rate="+5%" volume="+0%">
+      开开，快跟挖挖一起拍拍手！
+    </prosody>
+  </voice>
+</speak>
